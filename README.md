@@ -1,3 +1,7 @@
+# Hello Msg
+
+There was no need actually of using some of the libraries those were used here, but it was like a showcase.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -1,11 +1,18 @@
 import React from 'react';
 import './App.css';
 import i18n from "i18next";
-import { initReactI18next, useTranslation } from "react-i18next";
+import { initReactI18next } from "react-i18next";
+import {
+  QueryClient,
+  QueryClientProvider,
+} from 'react-query'
 
 import enTranslationFile from "./translations/en.json"
 import Login from './pages/Login';
 
+
+// Create a client
+const queryClient = new QueryClient()
 i18n
   .use(initReactI18next)
   .init({
@@ -23,13 +30,10 @@ i18n
   });
 
 function App() {
-  const { t } = useTranslation();
-
   return (
-    <>
+    <QueryClientProvider client={queryClient}>
       <Login />
-      <h1>{t('signin')}</h1>
-    </>
+    </QueryClientProvider>
   );
 }
 
