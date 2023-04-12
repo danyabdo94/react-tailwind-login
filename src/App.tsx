@@ -4,7 +4,7 @@ import i18n from "i18next";
 import { initReactI18next, useTranslation } from "react-i18next";
 
 import enTranslationFile from "./translations/en.json"
-import Login from './components/Login';
+import Login from './pages/Login';
 
 i18n
   .use(initReactI18next)
